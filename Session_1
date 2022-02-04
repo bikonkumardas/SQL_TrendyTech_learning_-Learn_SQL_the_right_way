@@ -1,0 +1,42 @@
+Relational Database: Has relation and comes in form of row + column.
+NoSQL: Nas no relation and comes in key,value pairs.
+
+#Run this to connect to make sure mysql is running:
+mysql-ctl cli
+
+#To know how many databases are there:
+show databases;
+
+#To know how many tables are there:
+show tables;
+
+#To create a database:
+create database trendytech;
+
+#To drop a database:
+drop database trendytech;
+
+#To use a database:
+use trendytech;
+
+#To know which database you are using:
+select database();
+
+#To create a table:
+create table employee
+(
+name varchar(50),
+age  int,
+salary int );
+
+#To show the information of the table:
+describe employee;
+
+#To drop a table:
+drop table employee;
+
+
+#To drop a database:
+drop database trendytech;
+
+

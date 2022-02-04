@@ -1,0 +1,71 @@
+#CRUD operation:
+Create - insert statements
+Read - select statements
+Update - update statements
+Delete - delete statements
+
+#creating the employee table for my startup
+create table employee
+(
+firstname varchar(20),
+middlename varchar(20),
+lastname varchar(20),
+age int,
+salary int,
+location varchar(20)
+);
+
+
+#inserting values into the table:
+insert into employee(firstname,middlename,lastname ,age,salary,location) values ("kapil", "kumar","sharma", 28,1000, "bangalore");
+
+#adding another value:
+insert into employee(firstname,middlename,lastname ,age,salary,location) values ('sathish', 'kumar','sharma', 28, 1000, 'bangalore');
+
+#to see all the data of the table:
+select*from employee;
+
+#put a backslash to have (') in the table:
+('satish\'s' )  or use ("), like ("sathish's") 
+
+#adding  multiple records in one command Only using comma(,)
+insert into employee(firstname,middlename,lastname ,age,salary,location) values ('sathish', 'not','sharma', 28, 1000, 'bangalore'), ('sathish', 'not','sharma', 27, 5000, 'bangalore');
+
+#NULL - which is unknown
+#Declare a column which can not be NULL by putting "NOT NULL" after the column name:
+create table employee
+(
+firstname varchar(20) not null,
+middlename varchar(20),
+lastname varchar(20),
+age int not null,
+salary int,
+location varchar(20) not null
+);
+
+
+#Defult Values:  to set an info as a default value - #if you don't put anything, it will be bangalore as default: 
+create table employee
+(
+firstname varchar(20),
+middlename varchar(20),
+lastname varchar(20),
+age int,
+salary int,
+location varchar(20) default 'bangalore'
+);
+
+#putting only "NULL" is also allowed:
+insert into employee(firstname,middlename,lastname ,age,salary,location) values ('sathish', 'kumar','sharma', 28, 1000, NULL);
+
+#combination of DEFAULT and NULL:  #can't be null and by default it is bangalore:
+create table employee
+(
+firstname varchar(20),
+middlename varchar(20),
+lastname varchar(20),
+age int,
+salary int,
+location varchar(20) NOT NULL default 'bangalore'
+);
+
